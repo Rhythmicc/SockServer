@@ -18,12 +18,14 @@ def HelloCallback(status: bool, result: str):
     print(status, result)
 
 
-@server.register("fuck", callback=HelloCallback)
+@server.register("hello", callback=HelloCallback)
 def hello(who: str) -> (bool, str):
     """
     :param who:
     :return: bool -> 是否调用成功, str -> 返回结果
     """
+    if who == 'me':
+        return False, "who should not be 'me'"
     return True, f'hello {who}!'
 
 
