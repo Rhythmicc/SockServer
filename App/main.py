@@ -1,6 +1,6 @@
-from SockServer.SockServer import SockServer
+from SockServer import SockServer
 
-server = SockServer(8000)
+server = SockServer(8000, workers=8)
 
 
 def HelloCallback(status: bool, result: str):

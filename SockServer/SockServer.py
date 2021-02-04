@@ -12,13 +12,13 @@ class SockServer:
     warnString = '[bold yellow][警告]'
     infoString = '[bold cyan][提示]'
 
-    def __init__(self, port):
+    def __init__(self, port, workers: int = 4):
         self.port = port
         self.socketServer = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.socketServer.bind(('127.0.0.1', port))
         self.socketServer.listen(10)
         self.functionTable, self.functionTableLock = {}, Lock()
-        self.threadPool = ThreadPoolExecutor(4)
+        self.threadPool = ThreadPoolExecutor(workers)
         self.PoolDoing = []
 
     def __dealMsg(self, msg):
