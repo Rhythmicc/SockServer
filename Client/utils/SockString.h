@@ -1,7 +1,8 @@
 #pragma once
+extern "C" {
 #define BUFFER_SIZE 1024
-struct string;
-typedef struct string string, *string_t;
+struct SockString;
+typedef struct SockString SockString, *SockString_t;
 
 struct _node {
     char _src[BUFFER_SIZE];
@@ -9,7 +10,7 @@ struct _node {
     struct _node* _next;
 };
 
-struct string {
+struct SockString {
     struct _node*head, *end;
 };
 
@@ -20,30 +21,30 @@ struct _node* new_node() {
     return res;
 }
 
-string_t new_string() {
-    string*res = (string*)malloc(sizeof(string));
+SockString_t new_string() {
+    SockString_t res = (SockString_t)malloc(sizeof(SockString));
     res->head = new_node();
     res->end = res->head;
     return res;
 }
 
-void stringAddNode(string_t s) {
+void stringAddNode(SockString_t s) {
     s->end = new_node();
     s->end = s->end->_next;
 }
 
-void stringCat(string_t s, char*dst) {
+void stringCat(SockString_t s, char*dst) {
     while(*dst) {
         if (s->end->_len == BUFFER_SIZE - 1) stringAddNode(s);
         s->end->_src[s->end->_len++] = *dst++;
     }
 }
 
-void stringClean(string_t s) {
+void stringClean(SockString_t s) {
     memset(s->head->_src, 0, sizeof(char) * BUFFER_SIZE);
-    s->_len = 0;
+    s->head->_len = 0;
     s->end = s->head;
-    struct _node*p = head->_next;
+    struct _node*p = s->head->_next;
     while (p) {
         struct _node*tmp = p;
         p = p->_next;
@@ -51,7 +52,7 @@ void stringClean(string_t s) {
     }
 }
 
-void stringPuts(string_t s) {
+void stringPuts(SockString_t s) {
     struct _node*p = s->head;
     while (p != s->end) {
         printf("%s", p->_src);
@@ -60,7 +61,7 @@ void stringPuts(string_t s) {
     printf("%s\n", p->_src);
 }
 
-void deleteString(string_t s){
+void deleteString(SockString_t s){
     struct _node*p = s->head;
     while(p!=s->end){
         struct _node* tmp = p;
@@ -69,3 +70,4 @@ void deleteString(string_t s){
     }
     free(s);
 }
+};
