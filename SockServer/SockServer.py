@@ -1,3 +1,4 @@
+import time
 import json
 import signal
 import socket
@@ -63,7 +64,8 @@ class SockServer:
                 SockServer.console.print(SockServer.errorString, repr(e))
                 return
         msg = msg.strip()
-        SockServer.console.print(SockServer.infoString, f'GET: {msg}')
+        tm_string = time.strftime("%m-%d %H:%M:%S", time.localtime(time.time()))
+        SockServer.console.print(SockServer.infoString, f'GET: {msg}', tm_string)
         status, result = self.__dealMsg(msg)
         client_sc.send(result.encode('utf-8'))
         client_sc.close()

@@ -1,5 +1,7 @@
 #pragma once
+#ifdef __cplusplus
 extern "C" {
+##endif
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <stdio.h>
@@ -37,4 +39,6 @@ struct sockaddr_in* default_addr(const char* addr, const int port) {
     res->sin_addr.s_addr = inet_addr(addr);
     return res;
 }
+#ifdef __cplusplus
 };
+#endif

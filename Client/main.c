@@ -2,7 +2,7 @@
 
 int main(int argc, char **argv) {
     struct sockaddr_in*servaddr = default_addr();
-    string_t recvbuf = new_string();
+    SockString_t recvbuf = new_string();
 
     char postbuf[BUFFER_SIZE];
     memset(postbuf, 0, BUFFER_SIZE);

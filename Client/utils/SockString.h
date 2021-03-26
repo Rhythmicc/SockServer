@@ -52,6 +52,22 @@ void stringClean(SockString_t s) {
     }
 }
 
+char* stringToCharArray(SockString_t s) {
+    int _sz = 0;
+    struct _node* p = s->head;
+    while (p) {
+        _sz += p->_len;
+        p = p->_next;
+    }
+    char*res = (char*) malloc(sizeof(char) * (_sz + 1));
+    p = s->head;
+    while (p) {
+        strcat(res, p->_src);
+        p = p->_next;
+    }
+    return res;
+}
+
 void stringPuts(SockString_t s) {
     struct _node*p = s->head;
     while (p != s->end) {
