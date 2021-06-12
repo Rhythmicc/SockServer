@@ -1,4 +1,4 @@
-compile_tool,gcc -std=c11,
+compile_tool,gcc -std=c11 main.c -o dist/Client
 compile_filename,main.c
 executable_filename,dist/Client
 input_file,dist/input.txt

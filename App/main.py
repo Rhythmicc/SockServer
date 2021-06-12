@@ -3,19 +3,15 @@ from SockServer import SockServer
 server = SockServer(8000, workers=8)
 
 
-def HelloCallback(status: bool, result: str):
-    print(status, result)
-
-
-@server.register("hello", callback=HelloCallback)
-def hello(who: str) -> (bool, str):
+@server.register()
+def hello(who: str):
     """
     :param who:
-    :return: bool -> 是否调用成功, str -> 返回结果
+    :return:
     """
     if who == 'me':
-        return False, "who should not be 'me'"
-    return True, f'hello {who}!'
+        return "who should not be 'me'"
+    return {'status': True, 'msg': 'hello ' + who.strip()}
 
 
 if __name__ == '__main__':

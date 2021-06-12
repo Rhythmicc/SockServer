@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![](https://api-img.alapi.cn/image/2021/02/05/f613e100ef5d07b07d20e23a41aa88bf.png)
+![](https://cdn.u1.huluxia.com/g4/M02/C3/3A/rBAAdmDEHXWAZLrTAAC6oDSj5h0135.png)
 
 ## Install
 
@@ -18,19 +18,15 @@ from SockServer import SockServer
 server = SockServer(8000, workers=8)
 
 
-def HelloCallback(status: bool, result: str):
-    print(status, result)
-
-
-@server.register("hello", callback=HelloCallback)
-def hello(who: str) -> (bool, str):
+@server.register()
+def hello(who: str):
     """
     :param who:
-    :return: bool -> 是否调用成功, str -> 返回结果
+    :return: 
     """
     if who == 'me':
-        return False, "who should not be 'me'"
-    return True, f'hello {who}!'
+        return "who should not be 'me'"
+    return {'status': True, 'msg': 'hello ' + who.strip()}
 
 
 if __name__ == '__main__':
