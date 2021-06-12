@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![](https://cdn.u1.huluxia.com/g4/M02/C3/3A/rBAAdmDEHXWAZLrTAAC6oDSj5h0135.png)
+![](https://api-img.alapi.cn/image/2021/06/12/3fbaa8c9e953c4e8980884dac39a053a.jpg)
 
 ## Install
 

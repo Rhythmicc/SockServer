@@ -1,3 +1,4 @@
 project_configure.csv
 dist
 SockServer.egg-info
+.idea
