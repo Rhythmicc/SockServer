@@ -49,17 +49,17 @@ class SockServer:
         function, argv = infoBody.get('func'), infoBody.get('argv')
         if not function:
             _errorFlag = True
-            result = 'Invalid Request Format'
+            result = 'SockServer Error: Invalid Request Format'
         elif function not in self.functionTable:
             _errorFlag = True
-            result = f'No registered function named {function}'
+            result = f'SockServer Error: No registered function named {function}'
         else:
             typeTable = list(self.functionTable[function]['analyser'].parameters.values())
             for index, value in enumerate(argv):
                 if typeTable[index].annotation is inspect._empty:
                     continue
                 if not isinstance(value, typeTable[index].annotation):
-                    return False, 'Invalid Request with wrong parameters'
+                    return 'SockServer Error: Invalid Request with wrong parameters'
             try:
                 result = self.functionTable[function]['func'](*argv) \
                     if argv else self.functionTable[function]['func']()
@@ -95,8 +95,8 @@ class SockServer:
         if hasattr(result, '__str__'):
             client_sc.send(str(result).encode('utf-8'))
         else:
-            SockServer.console.print(SockServer.warnString, 'Result can\'t translate to string.')
-            client_sc.send('Result can\'t translate to string.')
+            SockServer.console.print(SockServer.warnString, 'Result can\'t be transformed to string.')
+            client_sc.send('SockServer Warning: Result can\'t be transformed to string.')
         client_sc.close()
         SockServer.console.print('-' * SockServer.console.width)
 
@@ -132,9 +132,7 @@ class SockServer:
             analyser = inspect.signature(func)
             if func.__name__ in self.functionTable:
                 SockServer.console.print(SockServer.warnString, f'{func.__name__} already registered.')
-            # self.functionTableLock.acquire()
             self.functionTable[func.__name__] = {'func': func, 'analyser': analyser}
-            # self.functionTableLock.release()
             SockServer.console.print(SockServer.infoString, f'Registered: {func}')
         return wrapper
 

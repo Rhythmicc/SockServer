@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![](https://api-img.alapi.cn/image/2021/06/12/3fbaa8c9e953c4e8980884dac39a053a.jpg)
+![](https://api-img.alapi.cn/image/2021/06/12/d0aad9bd5711976580dbabb114d64a4b.jpg)
 
 ## Install
 
