@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![](https://api-img.alapi.cn/image/2021/06/12/d0aad9bd5711976580dbabb114d64a4b.jpg)
+![](https://alapi.rhythmlian.cn/image/2021/06/12/d0aad9bd5711976580dbabb114d64a4b.jpg)
 
 ## Install
 
