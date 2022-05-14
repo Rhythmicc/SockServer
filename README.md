@@ -13,6 +13,7 @@
 ## Usage
 
 ```python3
+import json
 from SockServer import SockServer
 
 server = SockServer(8000, workers=8)
@@ -26,7 +27,7 @@ def hello(who: str):
     """
     if who == 'me':
         return "who should not be 'me'"
-    return {'status': True, 'msg': 'hello ' + who.strip()}
+    return json.dumps({'status': True, 'msg': 'hello ' + who.strip()})
 
 
 if __name__ == '__main__':
