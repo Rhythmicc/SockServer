@@ -2,29 +2,29 @@
 #include <cJSON.h>
 
 int main(int argc, char **argv) {
-    struct sockaddr_in*servaddr = default_addr("127.0.0.1", 8000);
-    SockString_t recvbuf = SockString_NewString();
+    struct sockaddr_in*server_addr = default_addr("127.0.0.1", 8000);
+    SockString_t recv_buf = SockString_NewString();
 
-    char postbuf[BUFFER_SIZE];
+    char post_buf[BUFFER_SIZE];
 
-    cJSON* json = cJSON_CreateObject();
-    cJSON_AddStringToObject(json, "func", argv[1]);
+    cJSON* post_json = cJSON_CreateObject();
+    cJSON_AddStringToObject(post_json, "func", argv[1]);
     cJSON* argvs_json = cJSON_CreateArray();
     for (int i = 2; i < argc; i++) {
         cJSON_AddItemToArray(argvs_json, cJSON_CreateString(argv[i]));
     }
-    cJSON_AddItemToObject(json, "argv", argvs_json);
-    cJSON_PrintPreallocated(json, postbuf, BUFFER_SIZE, 0);
+    cJSON_AddItemToObject(post_json, "argv", argvs_json);
+    cJSON_PrintPreallocated(post_json, post_buf, BUFFER_SIZE, 0);
 
-    puts(postbuf);
-    call_api(servaddr, postbuf, recvbuf);
+    puts(post_buf);
+    call_api(server_addr, post_buf, recv_buf);
 
-    cJSON_Delete(json);
+    cJSON_Delete(post_json);
     
-    char* recv_string = SockString_ToCharArray(recvbuf);
+    char* recv_string = SockString_ToCharArray(recv_buf);
     cJSON* recv_json = cJSON_Parse(recv_string);
     free(recv_string);
-    deleteString(recvbuf);
+    deleteString(recv_buf);
 
     cJSON_Print(recv_json);
 
@@ -49,6 +49,6 @@ int main(int argc, char **argv) {
         }
     }
 
-    free(servaddr);
+    free(server_addr);
     return 0;
 }
