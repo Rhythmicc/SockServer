@@ -16,33 +16,33 @@ struct SockString {
     struct _node *head, *end;
 };
 
-struct _node *new_node() {
+struct _node *_new_node() {
     struct _node *res = (struct _node *) calloc(1, sizeof(struct _node));
     res->_len = 0;
     res->_next = NULL;
     return res;
 }
 
-SockString_t new_string() {
+SockString_t SockString_NewString() {
     SockString_t res = (SockString_t) malloc(sizeof(SockString));
-    res->head = new_node();
+    res->head = _new_node();
     res->end = res->head;
     return res;
 }
 
-void stringAddNode(SockString_t s) {
-    s->end = new_node();
+void SockString_AddNode(SockString_t s) {
+    s->end = _new_node();
     s->end = s->end->_next;
 }
 
-void stringCat(SockString_t s, char *dst) {
+void SockString_Cat(SockString_t s, char *dst) {
     while (*dst) {
-        if (s->end->_len == BUFFER_SIZE - 1) stringAddNode(s);
+        if (s->end->_len == BUFFER_SIZE - 1) SockString_AddNode(s);
         s->end->_src[s->end->_len++] = *dst++;
     }
 }
 
-void stringClean(SockString_t s) {
+void SockString_Clean(SockString_t s) {
     memset(s->head->_src, 0, sizeof(char) * BUFFER_SIZE);
     s->head->_len = 0;
     s->end = s->head;
@@ -54,7 +54,7 @@ void stringClean(SockString_t s) {
     }
 }
 
-char *stringToCharArray(SockString_t s) {
+char *SockString_ToCharArray(SockString_t s) {
     int _sz = 0;
     struct _node *p = s->head;
     while (p) {
@@ -70,7 +70,7 @@ char *stringToCharArray(SockString_t s) {
     return res;
 }
 
-void stringPuts(SockString_t s) {
+void SockString_Puts(SockString_t s) {
     struct _node *p = s->head;
     while (p != s->end) {
         printf("%s", p->_src);
@@ -79,7 +79,7 @@ void stringPuts(SockString_t s) {
     printf("%s\n", p->_src);
 }
 
-void deleteString(SockString_t s) {
+void SockString_Delete(SockString_t s) {
     struct _node *p = s->head;
     while (p != s->end) {
         struct _node *tmp = p;

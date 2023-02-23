@@ -1,0 +1,15 @@
+{
+    "build": "cd dist && cmake .. && make -j && cd ..",
+    "entry_point": "main.c",
+    "executable": "dist/Client",
+    "input_file": "dist/input.txt",
+    "template_root": "template/",
+    "server_targets": [
+        {
+            "user": "",
+            "host": "",
+            "path": "",
+            "port": "22"
+        }
+    ]
+}

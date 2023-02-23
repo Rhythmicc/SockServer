@@ -10,8 +10,8 @@ def hello(who: str):
     :return:
     """
     if who == 'me':
-        return "who should not be 'me'"
-    return {'status': True, 'msg': 'hello ' + who.strip()}
+        return {'status': False, 'result': 'you are not allowed to say hello to yourself'}
+    return {'status': True, 'result': 'hello ' + who.strip()}
 
 
 if __name__ == '__main__':
