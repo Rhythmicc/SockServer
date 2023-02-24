@@ -129,53 +129,53 @@ Client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
 .PHONY : Client/fast
 
-main.o: main.c.o
-.PHONY : main.o
+src/cJSON.o: src/cJSON.c.o
+.PHONY : src/cJSON.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/main.c.o
-.PHONY : main.c.o
+src/cJSON.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/cJSON.c.o
+.PHONY : src/cJSON.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+src/cJSON.i: src/cJSON.c.i
+.PHONY : src/cJSON.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/main.c.i
-.PHONY : main.c.i
+src/cJSON.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/cJSON.c.i
+.PHONY : src/cJSON.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+src/cJSON.s: src/cJSON.c.s
+.PHONY : src/cJSON.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/main.c.s
-.PHONY : main.c.s
+src/cJSON.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/cJSON.c.s
+.PHONY : src/cJSON.c.s
 
-utils/cJSON.o: utils/cJSON.c.o
-.PHONY : utils/cJSON.o
+src/main.o: src/main.c.o
+.PHONY : src/main.o
 
 # target to build an object file
-utils/cJSON.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/utils/cJSON.c.o
-.PHONY : utils/cJSON.c.o
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-utils/cJSON.i: utils/cJSON.c.i
-.PHONY : utils/cJSON.i
+src/main.i: src/main.c.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-utils/cJSON.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/utils/cJSON.c.i
-.PHONY : utils/cJSON.c.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-utils/cJSON.s: utils/cJSON.c.s
-.PHONY : utils/cJSON.s
+src/main.s: src/main.c.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-utils/cJSON.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/utils/cJSON.c.s
-.PHONY : utils/cJSON.c.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/src/main.c.s
+.PHONY : src/main.c.s
 
 # Help Target
 help:
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Client"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... utils/cJSON.o"
-	@echo "... utils/cJSON.i"
-	@echo "... utils/cJSON.s"
+	@echo "... src/cJSON.o"
+	@echo "... src/cJSON.i"
+	@echo "... src/cJSON.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

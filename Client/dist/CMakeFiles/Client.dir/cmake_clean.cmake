@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Client.dir/main.c.o"
-  "CMakeFiles/Client.dir/main.c.o.d"
-  "CMakeFiles/Client.dir/utils/cJSON.c.o"
-  "CMakeFiles/Client.dir/utils/cJSON.c.o.d"
+  "CMakeFiles/Client.dir/src/cJSON.c.o"
+  "CMakeFiles/Client.dir/src/cJSON.c.o.d"
+  "CMakeFiles/Client.dir/src/main.c.o"
+  "CMakeFiles/Client.dir/src/main.c.o.d"
   "Client"
   "Client.pdb"
 )

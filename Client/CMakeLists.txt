@@ -3,6 +3,7 @@ project(Client C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(utils)
+include_directories(include)
+aux_source_directory(src/ SRC)
 
-add_executable(Client utils/cJSON.h utils/cJSON.c utils/SockClient.h utils/SockString.h main.c)
+add_executable(Client ${SRC})

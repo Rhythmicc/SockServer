@@ -4,7 +4,7 @@
 # compile C with /opt/homebrew/bin/gcc-12
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/lianhaocheng/PycharmProjects/SockServer/Client/utils
+C_INCLUDES = -I/Users/lianhaocheng/PycharmProjects/SockServer/Client/include
 
 C_FLAGSarm64 =  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -std=gnu11
 

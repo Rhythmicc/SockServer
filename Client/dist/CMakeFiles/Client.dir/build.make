@@ -69,44 +69,44 @@ include CMakeFiles/Client.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Client.dir/flags.make
 
-CMakeFiles/Client.dir/utils/cJSON.c.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/utils/cJSON.c.o: /Users/lianhaocheng/PycharmProjects/SockServer/Client/utils/cJSON.c
-CMakeFiles/Client.dir/utils/cJSON.c.o: CMakeFiles/Client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lianhaocheng/PycharmProjects/SockServer/Client/dist/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Client.dir/utils/cJSON.c.o"
-	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Client.dir/utils/cJSON.c.o -MF CMakeFiles/Client.dir/utils/cJSON.c.o.d -o CMakeFiles/Client.dir/utils/cJSON.c.o -c /Users/lianhaocheng/PycharmProjects/SockServer/Client/utils/cJSON.c
+CMakeFiles/Client.dir/src/cJSON.c.o: CMakeFiles/Client.dir/flags.make
+CMakeFiles/Client.dir/src/cJSON.c.o: /Users/lianhaocheng/PycharmProjects/SockServer/Client/src/cJSON.c
+CMakeFiles/Client.dir/src/cJSON.c.o: CMakeFiles/Client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lianhaocheng/PycharmProjects/SockServer/Client/dist/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Client.dir/src/cJSON.c.o"
+	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Client.dir/src/cJSON.c.o -MF CMakeFiles/Client.dir/src/cJSON.c.o.d -o CMakeFiles/Client.dir/src/cJSON.c.o -c /Users/lianhaocheng/PycharmProjects/SockServer/Client/src/cJSON.c
 
-CMakeFiles/Client.dir/utils/cJSON.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Client.dir/utils/cJSON.c.i"
-	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lianhaocheng/PycharmProjects/SockServer/Client/utils/cJSON.c > CMakeFiles/Client.dir/utils/cJSON.c.i
+CMakeFiles/Client.dir/src/cJSON.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Client.dir/src/cJSON.c.i"
+	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lianhaocheng/PycharmProjects/SockServer/Client/src/cJSON.c > CMakeFiles/Client.dir/src/cJSON.c.i
 
-CMakeFiles/Client.dir/utils/cJSON.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Client.dir/utils/cJSON.c.s"
-	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lianhaocheng/PycharmProjects/SockServer/Client/utils/cJSON.c -o CMakeFiles/Client.dir/utils/cJSON.c.s
+CMakeFiles/Client.dir/src/cJSON.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Client.dir/src/cJSON.c.s"
+	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lianhaocheng/PycharmProjects/SockServer/Client/src/cJSON.c -o CMakeFiles/Client.dir/src/cJSON.c.s
 
-CMakeFiles/Client.dir/main.c.o: CMakeFiles/Client.dir/flags.make
-CMakeFiles/Client.dir/main.c.o: /Users/lianhaocheng/PycharmProjects/SockServer/Client/main.c
-CMakeFiles/Client.dir/main.c.o: CMakeFiles/Client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lianhaocheng/PycharmProjects/SockServer/Client/dist/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Client.dir/main.c.o"
-	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Client.dir/main.c.o -MF CMakeFiles/Client.dir/main.c.o.d -o CMakeFiles/Client.dir/main.c.o -c /Users/lianhaocheng/PycharmProjects/SockServer/Client/main.c
+CMakeFiles/Client.dir/src/main.c.o: CMakeFiles/Client.dir/flags.make
+CMakeFiles/Client.dir/src/main.c.o: /Users/lianhaocheng/PycharmProjects/SockServer/Client/src/main.c
+CMakeFiles/Client.dir/src/main.c.o: CMakeFiles/Client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lianhaocheng/PycharmProjects/SockServer/Client/dist/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Client.dir/src/main.c.o"
+	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Client.dir/src/main.c.o -MF CMakeFiles/Client.dir/src/main.c.o.d -o CMakeFiles/Client.dir/src/main.c.o -c /Users/lianhaocheng/PycharmProjects/SockServer/Client/src/main.c
 
-CMakeFiles/Client.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Client.dir/main.c.i"
-	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lianhaocheng/PycharmProjects/SockServer/Client/main.c > CMakeFiles/Client.dir/main.c.i
+CMakeFiles/Client.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Client.dir/src/main.c.i"
+	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/lianhaocheng/PycharmProjects/SockServer/Client/src/main.c > CMakeFiles/Client.dir/src/main.c.i
 
-CMakeFiles/Client.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Client.dir/main.c.s"
-	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lianhaocheng/PycharmProjects/SockServer/Client/main.c -o CMakeFiles/Client.dir/main.c.s
+CMakeFiles/Client.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Client.dir/src/main.c.s"
+	/opt/homebrew/bin/gcc-12 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/lianhaocheng/PycharmProjects/SockServer/Client/src/main.c -o CMakeFiles/Client.dir/src/main.c.s
 
 # Object files for target Client
 Client_OBJECTS = \
-"CMakeFiles/Client.dir/utils/cJSON.c.o" \
-"CMakeFiles/Client.dir/main.c.o"
+"CMakeFiles/Client.dir/src/cJSON.c.o" \
+"CMakeFiles/Client.dir/src/main.c.o"
 
 # External object files for target Client
 Client_EXTERNAL_OBJECTS =
 
-Client: CMakeFiles/Client.dir/utils/cJSON.c.o
-Client: CMakeFiles/Client.dir/main.c.o
+Client: CMakeFiles/Client.dir/src/cJSON.c.o
+Client: CMakeFiles/Client.dir/src/main.c.o
 Client: CMakeFiles/Client.dir/build.make
 Client: CMakeFiles/Client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lianhaocheng/PycharmProjects/SockServer/Client/dist/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Client"

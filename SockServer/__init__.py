@@ -13,4 +13,4 @@
 
 Author: RhythmLian
 """
-from .SockServer import *
+from .SockServer import SockServer
