@@ -147,5 +147,6 @@ CMakeFiles/Client.dir/main.c.o: \
  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/shm.h \
  /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/sys/ipc.h \
  /Users/lianhaocheng/PycharmProjects/SockServer/Client/utils/SockString.h \
+ /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/netdb.h \
  /Users/lianhaocheng/PycharmProjects/SockServer/Client/utils/cJSON.h \
  /opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin21/12/include/stddef.h

@@ -8,7 +8,13 @@ int main(int argc, char **argv)
     ! 由于SockClient不具备域名解析功能，因此需要使用IP地址
     ! 如果服务端在本机，请使用 127.0.0.1
     */
-    struct sockaddr_in *server_addr = default_addr("10.64.128.99", 8080);
+    char ip[16];
+    if (!get_ip_by_host("hc-server.rhythmlian.cn", ip)) // * 通过域名获取IP地址
+    {
+        printf("Error: get_ip_by_host failed\n");
+        return 1;
+    }
+    struct sockaddr_in *server_addr = default_addr(ip, 8080);
 
     /*
      * 构建JSON对象，用于存储API调用的函数名与参数
