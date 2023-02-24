@@ -29,7 +29,7 @@ void call_api(struct sockaddr_in* servaddr, char*cmd, SockString_t result) {
         memset(buffer, 0, BUFFER_SIZE);
         ssize_t ret = recv(sc, buffer, BUFFER_SIZE, 0); ///接收
         if(ret<=0)break;
-        stringCat(result, buffer);
+        SockString_Cat(result, buffer);
     }
     close(sc);
 }

@@ -17,10 +17,10 @@ class SockServer:
 
     def __init__(self, port, host: str = "127.0.0.1", workers: int = 4):
         """
-        简单的 Socket 多线程服务框架，基于JSON的传输协议，并带有基础的类型检查能力。
+        简单的 Socket 多线程服务框架, 基于JSON的传输协议, 并带有基础的类型检查能力。
 
         :param port: 端口
-        :param host: 地址
+        :param host: 地址, 默认为本地, 如需远程访问请使用 0.0.0.0
         :param workers: 线程数量
         """
         self.port = port
