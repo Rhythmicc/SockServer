@@ -1,10 +1,10 @@
 # SockServer
 
-A very tiny RPC framework
+A very tiny RPC framework, with ability to perform basic type checks.
 
 ## Screenshot
 
-![](https://alapi.rhythmlian.cn/image/2021/06/12/d0aad9bd5711976580dbabb114d64a4b.jpg)
+![demo](https://cos.rhythmlian.cn/ImgBed/0ba3cba4b129c1cfaea588a5821415ad.png)
 
 ## Install
 
