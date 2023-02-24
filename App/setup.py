@@ -1,13 +1,14 @@
 from setuptools import setup, find_packages
+from App import name, executable_name
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
-VERSION = "0.0.5"
+VERSION = "0.0.0"
 
 setup(
-    name='SockServer',
+    name=name,
     version=VERSION,
-    description='Socket Server with ThreadPool',
+    description="< your pypi lib description >",
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -15,14 +16,17 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    keywords='Socket Server with ThreadPool',
-    author='RhythmLian',
-    author_mail='RhythmLian@outlook.com',
-    url="https://github.com/Rhythmicc/SockServer",
-    license='MIT',
+    keywords="< your pypi lib keywords >",
+    author="< your name >",
+    url="< which url to find your lib >",
+    license="MIT",
     packages=find_packages(),
     include_package_data=True,
     zip_safe=True,
-    install_requires=['rich'],
-    # entry_points={},
+    install_requires=["Qpro"],
+    entry_points={
+        "console_scripts": [
+            f"{executable_name} = {name}.main:main",
+        ]
+    },
 )
