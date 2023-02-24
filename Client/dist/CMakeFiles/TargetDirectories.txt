@@ -1,0 +1,3 @@
+/Users/lianhaocheng/PycharmProjects/SockServer/Client/dist/CMakeFiles/Client.dir
+/Users/lianhaocheng/PycharmProjects/SockServer/Client/dist/CMakeFiles/edit_cache.dir
+/Users/lianhaocheng/PycharmProjects/SockServer/Client/dist/CMakeFiles/rebuild_cache.dir
