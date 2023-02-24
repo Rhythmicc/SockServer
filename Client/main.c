@@ -4,14 +4,15 @@
 int main(int argc, char **argv)
 {
     /*
-    * 服务器地址与端口，请自行修改
+    * 服务端地址与端口，请自行修改
     ! 由于SockClient不具备域名解析功能，因此需要使用IP地址
+    ! 如果服务端在本机，请使用 127.0.0.1
     */
     struct sockaddr_in *server_addr = default_addr("10.64.128.99", 8080);
 
     /*
      * 构建JSON对象，用于存储API调用的函数名与参数
-     * 数据形如: {"func": "func_name", "argv": ["arg1", "arg2", ...]}
+     * 数据形如: {"func": argv[1], "argv": [argv[2], argv[3], ...]}
      */
     cJSON *post_json = cJSON_CreateObject();
     cJSON_AddStringToObject(post_json, "func", argv[1]);
@@ -35,14 +36,14 @@ int main(int argc, char **argv)
      */
     call_api(server_addr, post_buf, recv_buf);
 
-    cJSON_Delete(post_json);                              // * 释放JSON对象
+    cJSON_Delete(post_json); // * 释放JSON对象
 
     char *recv_string = SockString_ToCharArray(recv_buf); // * 将SockString转换为字符串
     cJSON *recv_json = cJSON_Parse(recv_string);          // * 将字符串转换为JSON对象
     free(recv_string);                                    // * 释放字符串
     SockString_Delete(recv_buf);                          // * 释放SockString
 
-    cJSON_Print(recv_json);                               // * 打印收到的JSON对象
+    cJSON_Print(recv_json); // * 打印收到的JSON对象
 
     if (cJSON_IsFalse(cJSON_GetObjectItem(recv_json, "status")))
     {
