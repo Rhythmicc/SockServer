@@ -1,0 +1,28 @@
+[tool.qpro]
+[[tool.qpro.server_targets]]
+user = "lianhaocheng"
+host = "localhost"
+path = "/opt/homebrew/lib/python3.10/site-packages/"
+port = "22"
+
+[tool.qpro.config]
+build = ""
+entry_point = ""
+executable = ""
+
+[tool.poetry]
+name = "sockserver"
+version = "0.0.6"
+description = "Socket Server with ThreadPool"
+authors = ["Rhythmicc <rhythmlian.cn@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rich = "^13.9.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
